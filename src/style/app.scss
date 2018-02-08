@@ -1,0 +1,10 @@
+
+@import 'foundationSettings';
+@import '~foundation-sites/scss/util/util';
+@import '~foundation-sites/scss/util/mixins';
+
+@import './navbar';
+
+#welcome {
+	display: inline-block;
+}
