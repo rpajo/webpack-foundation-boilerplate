@@ -1,7 +1,7 @@
 # webpack-foundation-boilerplate
 
 ## Description
-This is a boilerplate starter project featuring Webpack 3 bundler and Foundation for sites 6 framework. The features include:
+This is a boilerplate starter project featuring Webpack 4 bundler and Foundation for sites 6 framework. The features include:
 -  [x] Webpack Development & Production configurations
 -  [x] Babel
 -  [x] Sass
@@ -18,13 +18,12 @@ Make sure you have the latest Stable or LTS version of Node.js installed.
 
 ## Available Commands
 - `npm run serve` - Run the live-reload development server
-- `npm run watch` - Run Webpack watch with development config
 - `npm run build` - Build the production bundle
-- `npm run buildDev` - Build the development bundle
 
 ### Notes
-The production and development configurations  are located in `webpack.prod.config.js` and `webpack.dev.config.js` respectively. You can find the main, common config in `webpack.config.js`.
-The bundle is split into the `app` and `vendor` chunk.  The configs use some common plugins and loaders. The development bundler also runs the `BundleAnalyzerPlugin`. The foundation settings file has been oved to the project folder for convenience. You can of course tweak the imports/plugins/loaders to your liking.
+The production and development configurations  are located in `webpack.config.prod.js` and `webpack.config.dev.js` respectively.
+
+The configs use some common plugins and loaders. The development bundler also runs the `BundleAnalyzerPlugin`. The foundation settings file has been oved to the project folder for convenience. You can of course tweak the imports/plugins/loaders to your liking.
 
 ### License 
 Licensed under the MIT license.
