@@ -17,8 +17,8 @@ module.exports = {
 
 	devServer: {
 		port: 9000, // port to run dev-server
-		hot: true,
 		contentBase: path.join(__dirname, 'src/public'),
+		watchContentBase: true,
     watchOptions: {
       poll: true
 		}
@@ -54,7 +54,7 @@ module.exports = {
 					loader: 'file-loader',
 					options: {
 						limit: 10000,
-						name: "assets/[hash].[ext]"
+						name: "assets/[name].[ext]"
 					},
 				}
 			]
@@ -65,10 +65,10 @@ module.exports = {
 		minimize: false
 	},
   	plugins: [
-			new webpack.HotModuleReplacementPlugin(),
 			new HtmlWebpackPlugin({
 				template: __dirname + "/src/public/index.html",
 				inject: 'body',
+				favicon: './src/public/images/favicon-32.png'
 			}),
 			new webpack.ProvidePlugin({
 				$: 'jquery',

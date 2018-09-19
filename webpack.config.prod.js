@@ -72,7 +72,8 @@ module.exports = {
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			template: __dirname + "/src/public/index.html",
-			filename: 'index.html'
+			filename: 'index.html',
+			favicon: './src/public/images/favicon-32.png'
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
