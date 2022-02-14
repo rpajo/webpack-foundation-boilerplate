@@ -16,13 +16,22 @@ module.exports = {
 	},
 
 	devServer: {
+		hot: false,
 		port: 9000, // port to run dev-server
-		contentBase: path.join(__dirname, 'src/public'),
-		watchContentBase: true,
-		watchOptions: {
-			poll: true
+		watchFiles: ['src/**/*.js', 'public/**/+'],
+		static: {
+			directory: path.resolve(__dirname, 'public'),
+			staticOptions: {},
+			serveIndex: true,
+			watch: true,
 		},
-		// open: true
+		client: {
+			progress: true,
+			overlay: {
+        errors: true,
+        warnings: false,
+      }
+		}
 	},
 
 	devtool: 'source-map',
@@ -33,12 +42,8 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				use: [{
-					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env']
-					}
-				}
-				]
+					loader: 'babel-loader'
+				}]
 			},
 			{
 				test: /\.(sa|sc|c)ss$/,
@@ -85,7 +90,7 @@ module.exports = {
 			jQuery: 'jquery',
 		}),
 
-		// Remove this if you dontr need bundle analysis
+		// Remove this if you don't need bundle analysis
 		new BundleAnalyzerPlugin(),
 
 		new MiniCssExtractPlugin({

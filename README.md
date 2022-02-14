@@ -1,8 +1,10 @@
-# webpack-foundation-boilerplate
+# Webpack 5 + Foundation for sites 6 Boilerplate
 
 ## Description
 This is a boilerplate starter project featuring Webpack 5 bundler and Foundation for sites 6 framework. The features include:
--  [x] Webpack Development & Production configurations
+-  [x] Webpack 6
+-  [x] Auto-reload on changes
+-  [x] Development & Production configurations
 -  [x] Babel
 -  [x] Sass
 -  [x] Postcss with Autoprefixer
@@ -11,8 +13,8 @@ This is a boilerplate starter project featuring Webpack 5 bundler and Foundation
 -  [x] Chunk splitting
 
 ## Usage
-Make sure you have the latest Stable or LTS version of Node.js installed.
-1. `git clone https://github.com/rpajo/webpack-foundation-boilerplate.git`
+Make sure you have the latest Stable or LTS version (min v16.x.x) of Node.js installed.
+1. `git clone https://github.com/rpajo/webpack-foundation-boilerplate.git` of click `Use this template`
 2. Run `npm install` or `yarn install`
 3. Start the development server using `npm run serve`
 3. Open [http://localhost:9000](http://localhost:9000)

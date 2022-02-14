@@ -9,7 +9,7 @@
   <body>
 
     <div class="navbar">
-      <%= require('html-loader!./navbar.html') %>
+      <%= require('html-loader!./navbar.html').default %>
     </div>
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
@@ -23,7 +23,7 @@
           <div class="callout">
             <div class="grid-x grid-padding-x">
               <div class="small-8 cell">
-                <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+                <h3>We&rsquo;re stoked you want to try Foundation!</h3>
                 <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
                 <p>Once you've exhausted the fun in this document, you should check out:</p>
               </div>
@@ -167,6 +167,13 @@
             <h5>So many components, girl!</h5>
             <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
             <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
+          </div>
+        </div>
+        <div class="medium-4 cell">
+          <div class="slider" data-slider data-initial-start="50" data-end="200">
+            <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+            <span class="slider-fill" data-slider-fill></span>
+            <input type="hidden">
           </div>
         </div>
       </div>
